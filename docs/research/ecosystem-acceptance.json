@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-17T11:58:49.083Z",
+  "platform": "darwin arm64",
+  "packages": {
+    "prose": "95c2e067b3256ae3e612c294c09ae4425c3a5f3625d1dc2ade370b99b8385ecf",
+    "planner": "2e05158d8ee1076370e3d186491fdc83083cb3a19e8f66ff6ef3452aacadd1e9",
+    "review": "bb7078c860d39ee684d0b028c9db4ddd55db3182574e55f7a72608b9b31c2bb9",
+    "atlas": "3d2526fb4f9ae0a39ff591f7c7ad559a1983e526df26614babf7c981e2fe764b"
+  },
+  "checks": [
+    "same_stable_mcp_connection",
+    "four_plugins_same_novel",
+    "packaged_skills",
+    "fixed_import",
+    "existing_plan_then_continuation",
+    "host_candidate",
+    "fixed_feedback",
+    "same_task_rework",
+    "feedback_linked_submission",
+    "unchanged_outside_utf8",
+    "new_evidence_review",
+    "atlas_fixed_projection",
+    "offline_export_without_full_manuscript"
+  ],
+  "refs": {
+    "plan": {
+      "object_id": "ext_e0a05703-4999-4671-b0e4-1ac612b92238",
+      "revision": 1,
+      "sha256": "472f2c0bb64a79526791ac293028b6796ada37a695b6ccd8de924c8c5d2b0ff8"
+    },
+    "continuity": {
+      "object_id": "ext_620ce659-c9e0-4de8-8752-1bb9aa4f7635",
+      "revision": 1,
+      "sha256": "b00e07aa83536f84c30ab025cf47ea80bfc4060e8e11b76f0c0404391af80949"
+    },
+    "prose": {
+      "object_id": "ext_61fc9022-2593-42d2-a024-84e40c900324",
+      "revision": 3,
+      "sha256": "f2a7eae76d483147834fccb90e3ef218261b6a779e11c9042151603be1d1c3cf"
+    },
+    "review": {
+      "object_id": "ext_6f096a6f-4d7e-490f-ad0d-738fc719ff44",
+      "revision": 3,
+      "sha256": "6f8a698d26309bc567339de2ae9eb8960df627b9ceac2c25ed816d68a98e447f"
+    },
+    "atlas": {
+      "object_id": "ext_5d38b6b1-e8fb-4895-8261-3cb6267b0315",
+      "revision": 1,
+      "sha256": "f622e11410afb7dd000944f0bc5f134088aa5a5d0cf8d17f8170705a1cfbc1d9"
+    }
+  },
+  "adoption": false,
+  "finalization": false,
+  "paid_generation": false
+}

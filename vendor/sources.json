@@ -1,0 +1,33 @@
+{
+  "source_repository": "https://github.com/limecloud/hetu",
+  "revision": "c1762cb967eef45b03f3cc9ea7f5f6942a9a7724",
+  "scope": "构建时核验公共SDK与共享色板的固定快照，不导入宿主私有模块。",
+  "files": [
+    {
+      "file": "hetu-sdk.ts",
+      "source": "packages/plugin-sdk/src/index.ts",
+      "sha256": "8bb1d2d3146f7e5a3ad44815edfbdc1b784c2511d054061988e340b91311bace"
+    },
+    {
+      "file": "project-store.ts",
+      "source": "packages/plugin-sdk/src/project-store.ts",
+      "sha256": "1dcce9ac7169c4d7d31b70b462057db4aa58db0b34408113b0c79660a1687fed",
+      "adaptation": "仅将SDK类型导入路径index.ts改为本包hetu-sdk.ts；业务语义不变。"
+    },
+    {
+      "file": "radix-workbench.css",
+      "source": "assets/styles/radix-workbench.css",
+      "sha256": "ccf9f4d25676a4225180128d05a3d0a9d26e92fa832fdccb7d80c4d52ee4b625"
+    },
+    {
+      "file": "hetu-LICENSE",
+      "source": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "file": "radix-colors-MIT.txt",
+      "source": "assets/licenses/radix-colors-MIT.txt",
+      "sha256": "9c400881b9139571aa7acc3bd6e422a4f05223b4519169fb661298fb44bf228e"
+    }
+  ]
+}

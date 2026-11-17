@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-17",
+  "research_base": "../research/dsh-novel-plugins",
+  "references": [
+    "shiyan688/dsh-novel-craft"
+  ],
+  "clones": {
+    "base": "research/dsh-novel-plugins",
+    "records": [
+      {
+        "repository": "shiyan688/dsh-novel-craft",
+        "expected_commit": "8a52268b3d521e11fd78a3117c03c1f5a771a2cf",
+        "directory": "research/dsh-novel-plugins/shiyan688__dsh-novel-craft",
+        "scripts_executed": false,
+        "status": "cloned_fixed",
+        "actual_commit": "8a52268b3d521e11fd78a3117c03c1f5a771a2cf",
+        "working_tree": "clean",
+        "origin": "https://github.com/shiyan688/dsh-novel-craft.git",
+        "duration_seconds": 3.609
+      },
+      {
+        "repository": "ShanJun-pro-max/dsh-novel-workbench",
+        "expected_commit": "1c728bbca362c99dd379c26894008b56d4122460",
+        "directory": "research/dsh-novel-plugins/ShanJun-pro-max__dsh-novel-workbench",
+        "scripts_executed": false,
+        "status": "cloned_fixed",
+        "actual_commit": "1c728bbca362c99dd379c26894008b56d4122460",
+        "working_tree": "clean",
+        "origin": "https://github.com/ShanJun-pro-max/dsh-novel-workbench.git",
+        "duration_seconds": 8.266
+      },
+      {
+        "repository": "micellince/dsh-long-novel-workbench",
+        "expected_commit": "fae33646ad17565b64792e94be411f1d3fcf7e95",
+        "directory": "research/dsh-novel-plugins/micellince__dsh-long-novel-workbench",
+        "scripts_executed": false,
+        "status": "cloned_fixed",
+        "actual_commit": "fae33646ad17565b64792e94be411f1d3fcf7e95",
+        "working_tree": "clean",
+        "origin": "https://github.com/micellince/dsh-long-novel-workbench.git",
+        "duration_seconds": 57.195
+      },
+      {
+        "repository": "LiPu-jpg/Openwrite",
+        "expected_commit": "3635a1e5ca5ab9398e8adb7c3a91526826184a30",
+        "directory": "research/dsh-novel-plugins/LiPu-jpg__Openwrite",
+        "scripts_executed": false,
+        "status": "cloned_fixed",
+        "duration_seconds": 182.099,
+        "actual_commit": "3635a1e5ca5ab9398e8adb7c3a91526826184a30",
+        "working_tree": "clean",
+        "checkout_scope": "源码与文档；sparse排除release/和packages/studio-panel/vendor/二进制及供应商制品。",
+        "first_attempt_error": "Command '['git', '-c', 'core.hooksPath=/dev/null', '-C', 'research/dsh-novel-plugins/LiPu-jpg__Openwrite', 'checkout', '--detach', '3635a1e5ca5ab9398e8adb7c3a91526826184a30']' timed out after 180 seconds"
+      },
+      {
+        "repository": "KurohaneKaoruko/DSH-Creator",
+        "expected_commit": "e9a8e121a2ce9cd5e8d2721a31ab5ba7c1a399f3",
+        "directory": "research/dsh-novel-plugins/KurohaneKaoruko__DSH-Creator",
+        "scripts_executed": false,
+        "status": "cloned_fixed",
+        "actual_commit": "e9a8e121a2ce9cd5e8d2721a31ab5ba7c1a399f3",
+        "working_tree": "clean",
+        "origin": "https://github.com/KurohaneKaoruko/DSH-Creator.git",
+        "duration_seconds": 4.737
+      },
+      {
+        "repository": "DrizzleGig/dsh-novel-beat",
+        "expected_commit": "577d0995f9f47ba6b6a1398300089e7d42cb055a",
+        "directory": "research/dsh-novel-plugins/DrizzleGig__dsh-novel-beat",
+        "scripts_executed": false,
+        "status": "cloned_fixed",
+        "actual_commit": "577d0995f9f47ba6b6a1398300089e7d42cb055a",
+        "working_tree": "clean",
+        "origin": "https://github.com/DrizzleGig/dsh-novel-beat.git",
+        "duration_seconds": 7.728
+      },
+      {
+        "repository": "XiaoOu2024/dsh-novel-generator",
+        "expected_commit": "8e45f22ce6e5ebf5f6ce98efce8c8a2a199c82c8",
+        "directory": "research/dsh-novel-plugins/XiaoOu2024__dsh-novel-generator",
+        "scripts_executed": false,
+        "status": "cloned_fixed",
+        "actual_commit": "8e45f22ce6e5ebf5f6ce98efce8c8a2a199c82c8",
+        "working_tree": "clean",
+        "origin": "https://github.com/XiaoOu2024/dsh-novel-generator.git",
+        "duration_seconds": 5.711
+      },
+      {
+        "repository": "lilinshuei/novel-atlas",
+        "expected_commit": "2a6cd304c9ce4a7db00bb31e4a2ec08571f0efd3",
+        "directory": "research/dsh-novel-plugins/lilinshuei__novel-atlas",
+        "scripts_executed": false,
+        "status": "cloned_fixed",
+        "actual_commit": "2a6cd304c9ce4a7db00bb31e4a2ec08571f0efd3",
+        "working_tree": "clean",
+        "origin": "https://github.com/lilinshuei/novel-atlas.git",
+        "duration_seconds": 4.526
+      },
+      {
+        "repository": "baisama-cloud/dsh-galgame-generator",
+        "expected_commit": "276974e36a89dbaf07d9a7d4208d980088741160",
+        "directory": "research/dsh-novel-plugins/baisama-cloud__dsh-galgame-generator",
+        "scripts_executed": false,
+        "status": "cloned_fixed",
+        "actual_commit": "276974e36a89dbaf07d9a7d4208d980088741160",
+        "working_tree": "clean",
+        "origin": "https://github.com/baisama-cloud/dsh-galgame-generator.git",
+        "duration_seconds": 3.647
+      },
+      {
+        "repository": "sailoumili/novel-writer",
+        "expected_commit": "bd0082106998a4737d3428bed334cacde46accd9",
+        "directory": "research/dsh-novel-plugins/sailoumili__novel-writer",
+        "scripts_executed": false,
+        "status": "cloned_fixed",
+        "actual_commit": "bd0082106998a4737d3428bed334cacde46accd9",
+        "working_tree": "clean",
+        "origin": "https://github.com/sailoumili/novel-writer.git",
+        "duration_seconds": 4.238
+      },
+      {
+        "repository": "Tkingxiao/dsh-novel-solo",
+        "expected_commit": "5e10e69535eb2d8bf953b4e79b9131bc0885a90f",
+        "directory": "research/dsh-novel-plugins/Tkingxiao__dsh-novel-solo",
+        "scripts_executed": false,
+        "status": "cloned_fixed",
+        "actual_commit": "5e10e69535eb2d8bf953b4e79b9131bc0885a90f",
+        "working_tree": "clean",
+        "origin": "https://github.com/Tkingxiao/dsh-novel-solo.git",
+        "duration_seconds": 4.556
+      }
+    ]
+  }
+}

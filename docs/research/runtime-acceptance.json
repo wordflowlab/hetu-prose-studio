@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-17T11:26:53.405Z",
+  "platform": "darwin arm64",
+  "package_sha256": "4f5f4d3cacc8d55a5160236b5a6bca4ae4898d6da32a0074798c03778df55479",
+  "actions": [
+    "skills.read",
+    "save_project",
+    "list_projects",
+    "get_source",
+    "get_operation",
+    "put_rule",
+    "put_comparison",
+    "build_context",
+    "preview_refinement",
+    "verify_refinement",
+    "put_refinement",
+    "remove_comparison",
+    "remove_rule",
+    "compare_versions",
+    "export_project",
+    "get_project"
+  ],
+  "cli_mcp": true,
+  "skill_resources": true,
+  "hotplug": true,
+  "uninstall_reinstall": true,
+  "windows": false,
+  "limits": [
+    "Windows与Linux插件业务旅程未在实机验收。"
+  ]
+}

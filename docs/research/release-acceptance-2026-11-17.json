@@ -1,0 +1,121 @@
+{
+  "format_version": 1,
+  "recorded_at": "2026-11-17T13:02:43.156854+00:00",
+  "status": "passed_with_explicit_scope",
+  "release": {
+    "plugin_id": "org.wordflowlab.prose-studio",
+    "version": "0.1.1",
+    "tag": "v0.1.1",
+    "archive": "org.wordflowlab.prose-studio-0.1.1.tgz",
+    "archive_sha256": "73eff1d42c3d06911401ad92c60c206acb55fc7f2338b6a8cc3bf753ff19aa81",
+    "package_sha256": "a793eb0ff1438593696340d01640d7ae5c4eb95108c68c68aa2b74a5cbeeb3f7",
+    "size_bytes": 237590,
+    "minimum_host_version": "0.11.5",
+    "verified_platforms": [
+      "macOS arm64"
+    ],
+    "channel": "preview",
+    "extracted_files": 18,
+    "source_commit": "95b0364ca814b2b9c15581f8ea9e11284a2c818f",
+    "source_repository": "https://github.com/wordflowlab/hetu-prose-studio",
+    "release_url": "https://github.com/wordflowlab/hetu-prose-studio/releases/tag/v0.1.1"
+  },
+  "host": {
+    "version": "0.11.5",
+    "git_sha": "f485ef44fc2e2562df6af2884953ba7523083ad2",
+    "archive_sha256": "7adec82e8427e6e4efa0dc72e449f6434d4ff6d8371fbc92d12eb016b77adea7",
+    "manifest_sha256": "4a1c80178669e6aef1e631fd4c9ffa6b7c553e51ca35acda158c0ab0515c6e4b",
+    "source_files": 2763,
+    "application_entries": 2798,
+    "signature": true,
+    "notarization_status": "Accepted",
+    "staple_valid": true,
+    "platform": "macOS arm64",
+    "release_url": "https://github.com/limecloud/hetu/releases/tag/v0.11.5",
+    "ci_url": "https://github.com/limecloud/hetu/actions/runs/44077740567",
+    "ci_builds": {
+      "macos_arm64": "success",
+      "windows_x64": "success",
+      "linux_x64": "success",
+      "publish": "success"
+    },
+    "installed_inventory_matches": true,
+    "backup_created": false
+  },
+  "checks": {
+    "typecheck": "passed",
+    "unit_tests": 16,
+    "professional_actions": 15,
+    "download_archive_and_extracted_package": "matched",
+    "installed_cli_mcp_all_actions": "passed",
+    "packaged_skill_and_resources": "passed",
+    "hotplug_disable_enable_uninstall_reinstall": "passed",
+    "cas_conflict_and_original_operation_recovery": "passed",
+    "electron_with_packaged_core_and_node": "passed",
+    "light_dark_narrow_keyboard_export_reopen": "passed",
+    "four_plugin_same_novel_checks": 13
+  },
+  "conversation": {
+    "entry": "current Codex native MCP connection",
+    "existing_mcp_version": "0.10.0",
+    "new_codex_plugin": false,
+    "restarted_connection": false,
+    "result": {
+      "plugin_id": "org.wordflowlab.prose-studio",
+      "package_sha256": "a793eb0ff1438593696340d01640d7ae5c4eb95108c68c68aa2b74a5cbeeb3f7",
+      "actions": 15,
+      "skill_content_sha256": "b56b34b7f8fc18d0ea15dfc7abab062f04527f0a1689763e6dd7c62336b2c7cd",
+      "skill_read": "succeeded",
+      "method_resources_read": 2,
+      "existing_objects_checked": true,
+      "work_snapshot_read": true,
+      "saved_ref": {
+        "object_id": "ext_6c78d0d3-42bf-4dc5-a345-2fb9d5082489",
+        "revision": 1,
+        "sha256": "fa98a34d54ef88ebfc9b35aeb7fd8d5d0a9cd5fe79e6ad68f982acb7dd068235"
+      },
+      "readback_matches": true,
+      "replay_matches": true,
+      "previous_release_package_sha256": "95c2e067b3256ae3e612c294c09ae4425c3a5f3625d1dc2ade370b99b8385ecf",
+      "version": "0.1.1",
+      "hot_upgrade": {
+        "restarted_connection": false,
+        "actions_rediscovered": 15,
+        "skill_reloaded": true,
+        "existing_revision_unchanged": true
+      }
+    },
+    "data_scope": "独立演示小说中的规划与专业成果；没有正文，审校保持未检查。含正文候选的完整返工另见四插件隔离联动。"
+  },
+  "computer_use": {
+    "application": "正式安装的河图 0.11.5，macOS arm64",
+    "observed": [
+      "创作库与演示小说",
+      "四插件工作面与规划连续性工作面",
+      "独立工作面隐藏宿主导航",
+      "返回恢复宿主导航",
+      "文风热升级保留既有成果"
+    ],
+    "crash_observed": false,
+    "capture_observation": "普通窗口的原生捕获出现右侧空白，宿主与插件均可见；窗口缩放后捕获完整。未确定是窗口位置、捕获服务还是应用问题，不将该状态计入普通窗口视觉通过。隔离Electron 1360/760视口几何与行为断言单独通过。"
+  },
+  "evidence": {
+    "runtime": "research/runtime-acceptance.json",
+    "ecosystem": "research/ecosystem-acceptance.json",
+    "reproducible_tests": [
+      "tests/",
+      "package.json"
+    ]
+  },
+  "not_verified": [
+    "Windows/Linux 插件实机业务旅程",
+    "干净系统安装",
+    "系统真实中文输入法",
+    "完整辅助技术与系统材质降级",
+    "多机性能与付费模型成本",
+    "作者创作质量认可"
+  ],
+  "adoption": false,
+  "finalization": false,
+  "paid_generation": false
+}

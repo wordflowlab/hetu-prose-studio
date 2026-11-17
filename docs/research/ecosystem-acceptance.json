@@ -1,8 +1,8 @@
 {
-  "date": "2026-11-17T11:58:49.083Z",
+  "date": "2026-11-17T12:56:55.055Z",
   "platform": "darwin arm64",
   "packages": {
-    "prose": "95c2e067b3256ae3e612c294c09ae4425c3a5f3625d1dc2ade370b99b8385ecf",
+    "prose": "a793eb0ff1438593696340d01640d7ae5c4eb95108c68c68aa2b74a5cbeeb3f7",
     "planner": "2e05158d8ee1076370e3d186491fdc83083cb3a19e8f66ff6ef3452aacadd1e9",
     "review": "bb7078c860d39ee684d0b028c9db4ddd55db3182574e55f7a72608b9b31c2bb9",
     "atlas": "3d2526fb4f9ae0a39ff591f7c7ad559a1983e526df26614babf7c981e2fe764b"
@@ -24,29 +24,29 @@
   ],
   "refs": {
     "plan": {
-      "object_id": "ext_e0a05703-4999-4671-b0e4-1ac612b92238",
+      "object_id": "ext_f3e01dac-6508-4c52-bd28-b47db520bbd9",
       "revision": 1,
-      "sha256": "472f2c0bb64a79526791ac293028b6796ada37a695b6ccd8de924c8c5d2b0ff8"
+      "sha256": "4581e0013d53405227a7f9531d402169d8dd01906fc308375f9efb88883f6f48"
     },
     "continuity": {
-      "object_id": "ext_620ce659-c9e0-4de8-8752-1bb9aa4f7635",
+      "object_id": "ext_54668b07-dbdf-4082-897d-b71b8d0f527d",
       "revision": 1,
-      "sha256": "b00e07aa83536f84c30ab025cf47ea80bfc4060e8e11b76f0c0404391af80949"
+      "sha256": "518bf7e505ca18188081fdb0706ed3519b61872d7814052b804260fe71f6bfbf"
     },
     "prose": {
-      "object_id": "ext_61fc9022-2593-42d2-a024-84e40c900324",
+      "object_id": "ext_81a07d88-b352-4a8a-8c56-e1991cfc3df7",
       "revision": 3,
-      "sha256": "f2a7eae76d483147834fccb90e3ef218261b6a779e11c9042151603be1d1c3cf"
+      "sha256": "3bab03d3f910802355d950e5c536ae2f10160c490ba581f708afcdd617702220"
     },
     "review": {
-      "object_id": "ext_6f096a6f-4d7e-490f-ad0d-738fc719ff44",
+      "object_id": "ext_26150a3a-31c5-4787-91e8-49e89d6f2c17",
       "revision": 3,
-      "sha256": "6f8a698d26309bc567339de2ae9eb8960df627b9ceac2c25ed816d68a98e447f"
+      "sha256": "ae7ac1d737185c14853c8ad74c923e462722423e49afdb9d6530723ff9751b36"
     },
     "atlas": {
-      "object_id": "ext_5d38b6b1-e8fb-4895-8261-3cb6267b0315",
+      "object_id": "ext_6a04449d-0364-4aad-9249-2c00912df669",
       "revision": 1,
-      "sha256": "f622e11410afb7dd000944f0bc5f134088aa5a5d0cf8d17f8170705a1cfbc1d9"
+      "sha256": "b36e017997e52c714e3e7ffe66a48eca353e326fbace9beb2ba041ebd9fb8659"
     }
   },
   "adoption": false,

@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "host_api": "1",
   "id": "org.wordflowlab.prose-studio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "display": {
     "zh-CN": "文风工坊",
     "en": "Prose Studio"

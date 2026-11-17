@@ -207,7 +207,7 @@ function App() {
         {v.strategy && <p>{v.strategy}</p>}
         {v.scope && (
           <p className="muted">
-            适用：{v.scope.kind === "work" ? "当前作品" : v.scope.target} ·{" "}
+            适用：{v.scope.kind === "work" ? "当前作品" : v.scope.target}{"　"}
             {v.origin === "agent_inference" ? "Agent归纳" : "作者陈述"}
           </p>
         )}

@@ -1,7 +1,7 @@
 {
-  "date": "2026-11-17T11:26:53.405Z",
+  "date": "2026-11-17T12:40:22.416Z",
   "platform": "darwin arm64",
-  "package_sha256": "4f5f4d3cacc8d55a5160236b5a6bca4ae4898d6da32a0074798c03778df55479",
+  "package_sha256": "95c2e067b3256ae3e612c294c09ae4425c3a5f3625d1dc2ade370b99b8385ecf",
   "actions": [
     "skills.read",
     "save_project",
@@ -26,6 +26,6 @@
   "uninstall_reinstall": true,
   "windows": false,
   "limits": [
-    "Windows与Linux插件业务旅程未在实机验收。"
+    "固定候选生成与正式设定投影由独立旅程验收，未以错误分支代替成功证据。"
   ]
 }

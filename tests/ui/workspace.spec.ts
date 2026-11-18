@@ -231,7 +231,7 @@ test("真实Electron专业工作面、AI交接、固定导出、冲突与重开"
       await page.getByRole("button", { name: "关闭依据", exact: true }).click();
     }
     await buttons[0].click();
-    await page.emulateMedia({ reducedTransparency: "no-preference" });
+    await page.emulateMedia({ reducedTransparency: "no-preference",contrast:"no-preference",forcedColors:"none" });
     expect(
       await page.evaluate(
         () => getComputedStyle(document.body).backgroundImage,

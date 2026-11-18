@@ -231,12 +231,19 @@ test("真实Electron专业工作面、AI交接、固定导出、冲突与重开"
       await page.getByRole("button", { name: "关闭依据", exact: true }).click();
     }
     await buttons[0].click();
-    await page.emulateMedia({ reducedTransparency: "no-preference",contrast:"no-preference",forcedColors:"none" });
+    const display=await page.context().newCDPSession(page);
+    await display.send("Emulation.setEmulatedMedia",{features:[{name:"prefers-reduced-transparency",value:"no-preference"},{name:"prefers-contrast",value:"no-preference"},{name:"forced-colors",value:"none"}]});
+    expect(await page.evaluate(()=>matchMedia("(prefers-reduced-transparency:reduce)").matches)).toBe(false);
+
     expect(
       await page.evaluate(
         () => getComputedStyle(document.body).backgroundImage,
       ),
     ).toContain("gradient");
+    await display.send("Emulation.setEmulatedMedia",{features:[{name:"prefers-reduced-transparency",value:"reduce"}]});
+    expect(await page.evaluate(()=>getComputedStyle(document.body).backgroundImage)).toBe("none");
+    await display.send("Emulation.setEmulatedMedia",{features:[{name:"prefers-reduced-transparency",value:"no-preference"},{name:"prefers-contrast",value:"no-preference"}]});
+
     await page.getByRole("button", { name: "让AI处理", exact: true }).focus();
     await expect(
       page.getByRole("button", { name: "让AI处理", exact: true }),

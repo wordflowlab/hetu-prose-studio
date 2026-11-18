@@ -1,0 +1,52 @@
+{
+  "recorded_at": "2026-11-18",
+  "version": "0.2.0",
+  "plugin_id": "org.wordflowlab.prose-studio",
+  "tested_source_commit": "4338d7389d18222a446ccfefeee248f06961d973",
+  "package_sha256": "5005ec439334b5babd9d9bd35b3a7575185b55df67f3ea3623ed3c21226c3c7f",
+  "host": {
+    "version": "0.11.11",
+    "source_commit": "6053f973a6740b6f4d7fca1bd69452b2bac3fa46",
+    "source_build": false,
+    "signature_verified": true
+  },
+  "platform": "macOS arm64",
+  "unit_tests": 27,
+  "declared_actions": 26,
+  "official_ci": {
+    "id": 44250659933,
+    "url": "https://github.com/wordflowlab/hetu-prose-studio/actions/runs/44250659933",
+    "result": "success"
+  },
+  "results": [
+    {
+      "test": "machine",
+      "exit_code": 0
+    },
+    {
+      "test": "ui",
+      "exit_code": 0
+    }
+  ],
+  "same_codex_connection": {
+    "dynamic_discovery": true,
+    "packaged_skill_read": true,
+    "separate_codex_plugin": false
+  },
+  "compatibility": {
+    "optional_depth_version": 1,
+    "old_revision_preserved": true,
+    "destructive_downgrade_refused": true
+  },
+  "not_verified": [
+    "Windows/Linux专业业务旅程",
+    "文学质量与作者认可",
+    "付费模型",
+    "正文采纳及定稿"
+  ],
+  "earlier_failures_retained": [
+    "安装验收的默认透明度模拟未生效，经实际媒体查询改用CDP校验正常与减少透明度",
+    "旧页签列表分支已修复并复验",
+    "本机高负载导致的未知结果及超时不计为通过"
+  ]
+}

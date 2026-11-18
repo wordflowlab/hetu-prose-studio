@@ -105,6 +105,8 @@ test("有数据的专业深化工作面、真实计算、浅暗窄窗与键盘",
             await page.locator("body").innerText(),
           );
           expect(errors).toEqual([]);
+          await page.getByLabel("本次文本类型",{exact:true}).selectOption("");
+          await page.getByLabel("本次场景",{exact:true}).selectOption("");
           await page
             .getByLabel("本次人物", { exact: true })
             .selectOption("lin");

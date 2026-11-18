@@ -215,11 +215,14 @@ test("真实Electron专业工作面、AI交接、固定导出、冲突与重开"
       .getByRole("navigation", { name: "专业视图" })
       .getByRole("button")
       .all();
-    for (const [index,b] of buttons.entries()) {
+    for (const [index, b] of buttons.entries()) {
       await b.click();
       await expect(b).toHaveAttribute("aria-current", "page");
       await expect(page.getByRole("alert")).toHaveCount(0);
-      await page.screenshot({path:info.outputPath(`view-${index}.png`),fullPage:true});
+      await page.screenshot({
+        path: info.outputPath(`view-${index}.png`),
+        fullPage: true,
+      });
     }
     if (KIND === "prose_studio") {
       await page.getByRole("button", { name: "局部精修", exact: true }).click();
@@ -228,9 +231,16 @@ test("真实Electron专业工作面、AI交接、固定导出、冲突与重开"
       await page.getByRole("button", { name: "关闭依据", exact: true }).click();
     }
     await buttons[0].click();
-    expect(await page.evaluate(()=>getComputedStyle(document.body).backgroundImage)).toContain("gradient");
-    await page.getByRole("button",{name:"让AI处理",exact:true}).focus();
-    await expect(page.getByRole("button",{name:"让AI处理",exact:true})).toBeFocused();
+    await page.emulateMedia({ reducedTransparency: "no-preference" });
+    expect(
+      await page.evaluate(
+        () => getComputedStyle(document.body).backgroundImage,
+      ),
+    ).toContain("gradient");
+    await page.getByRole("button", { name: "让AI处理", exact: true }).focus();
+    await expect(
+      page.getByRole("button", { name: "让AI处理", exact: true }),
+    ).toBeFocused();
     await page.getByLabel("创作目标").fill("依据当前方案，准备下一轮创作");
     await page.getByRole("button", { name: "让AI处理", exact: true }).click();
     await expect(page.locator(".status")).toContainText("已复制接续说明");

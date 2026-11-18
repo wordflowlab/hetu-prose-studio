@@ -12,9 +12,23 @@ test("有数据的专业深化工作面、真实计算、浅暗窄窗与键盘",
   try {
     const refs = await importText(c, ["雨港。林溪在旧邮局等信。\n雨港。\n"]),
       ev = { source_index: 0, byte_start: 0, byte_end: 9, quote: "雨港。" };
-    const content=fixtureContent(ev);
-    content.depth.samples=[{id:"sample",before:ev,after:ev,feedback:"让停顿传递情绪，只用于这个人物",usage:"reusable"}];
-    const record=await c.invoke("save_project",{content,source_refs:refs,expected_revision:0,expected_sha256:"",operation_key:"ui-depth"});
+    const content = fixtureContent(ev);
+    content.depth.samples = [
+      {
+        id: "sample",
+        before: ev,
+        after: ev,
+        feedback: "让停顿传递情绪，只用于这个人物",
+        usage: "reusable",
+      },
+    ];
+    const record = await c.invoke("save_project", {
+      content,
+      source_refs: refs,
+      expected_revision: 0,
+      expected_sha256: "",
+      operation_key: "ui-depth",
+    });
     app = await electron.launch({
       executablePath:
         process.env.HETU_PACKAGED_APP ??

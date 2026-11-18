@@ -5,3 +5,5 @@ test-results/
 playwright-report/
 src/domain/validators.ts
 !package-lock.json
+
+/node_modules

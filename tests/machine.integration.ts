@@ -1,3 +1,4 @@
+import { runDepthScenario } from "./support/depth-scenario.ts";
 import assert from "node:assert/strict";
 import { mkdir, writeFile } from "node:fs/promises";
 import { test } from "node:test";
@@ -306,6 +307,7 @@ test(
         r = await c.invoke("set_layout", { ...base(r), layout: [] });
         r = await c.invoke("remove_node", { ...base(r), node_id: "chen" });
       }
+      await runDepthScenario(c, refs, ev);
       const comp = await c.invoke("compare_versions", {
         object_id: r.object.object_id,
         from_revision: 1,
@@ -391,7 +393,7 @@ test(
             skill_resources: true,
             hotplug: true,
             uninstall_reinstall: true,
-                windows: false,
+            windows: false,
             limits: [
               "固定候选生成与正式设定投影由独立旅程验收，未以错误分支代替成功证据。",
             ],

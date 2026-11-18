@@ -48,7 +48,7 @@ await writeFile(
     "\n\n默认流程、边界及验收见 [docs](docs/README.md)。\n",
 );
 await mkdir("dist/licenses", { recursive: true });
-const common = { bundle: true, metafile: true };
+const common = { bundle: true, metafile: true, preserveSymlinks:true, minify:true, define:{"process.env.NODE_ENV":"\"production\""} };
 const view = await build({
   ...common,
   entryPoints: ["src/view/index.tsx"],

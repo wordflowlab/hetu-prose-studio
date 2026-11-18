@@ -155,7 +155,25 @@ export async function start() {
         arguments: args,
       });
     const invoke = async (action: string, args: any = {}) => {
-      const outer = await raw(action, args);
+      let outer = await raw(action, args);
+      if (
+        outer.status !== "succeeded" &&
+        args.operation_key &&
+        ["hetu.outcome_unknown", "hetu.plugin_operation_failed"].includes(
+          outer.error?.code,
+        )
+      ) {
+        const recovered = await raw("hetu.extensions.operations.get", {
+          operation_key: args.operation_key,
+        });
+        assert.equal(recovered.status, "succeeded", JSON.stringify(recovered));
+        const result = recovered.data.result;
+        if (result.status === "succeeded") outer = { ...recovered };
+        else if (result.error?.code === "not_found")
+          outer = await raw(action, args);
+        else
+          assert.fail("原操作仍未知，保留输入停止：" + JSON.stringify(result));
+      }
       assert.equal(outer.status, "succeeded", JSON.stringify(outer));
       assert.equal(
         outer.data.result.status,

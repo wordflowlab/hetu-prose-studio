@@ -1,7 +1,7 @@
 {
-  "date": "2026-11-17T12:52:56.210Z",
+  "date": "2026-11-18T05:25:02.782Z",
   "platform": "darwin arm64",
-  "package_sha256": "a793eb0ff1438593696340d01640d7ae5c4eb95108c68c68aa2b74a5cbeeb3f7",
+  "package_sha256": "398bfb2a95121816ce98e5a1a43c0bb10db725b9c0efb93bbe3aaadba457a4e0",
   "actions": [
     "skills.read",
     "save_project",
@@ -16,6 +16,16 @@
     "put_refinement",
     "remove_comparison",
     "remove_rule",
+    "save_depth",
+    "preview_rule_selection",
+    "put_rule_applicability",
+    "put_learning_sample",
+    "put_rule_derivation",
+    "put_conflict_resolution",
+    "compile_context",
+    "export_style_template",
+    "preview_template_import",
+    "preview_composition",
     "compare_versions",
     "export_project",
     "get_project"

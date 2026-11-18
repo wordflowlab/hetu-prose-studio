@@ -1,3 +1,4 @@
+import { DepthView } from "./depth.tsx";
 import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import manifest from "../../contracts/plugin-manifest.json" with { type: "json" };
@@ -43,6 +44,7 @@ const names: Record<string, string> = {
 };
 const tabsets: Record<string, [string, string][]> = {
   prose_studio: [
+    ["depth", "文风深化"],
     ["rules", "写作偏好"],
     ["comparisons", "方向比较"],
     ["refinements", "局部精修"],
@@ -207,7 +209,8 @@ function App() {
         {v.strategy && <p>{v.strategy}</p>}
         {v.scope && (
           <p className="muted">
-            适用：{v.scope.kind === "work" ? "当前作品" : v.scope.target}{"　"}
+            适用：{v.scope.kind === "work" ? "当前作品" : v.scope.target}
+            {"　"}
             {v.origin === "agent_inference" ? "Agent归纳" : "作者陈述"}
           </p>
         )}
@@ -317,13 +320,27 @@ function App() {
         </section>
       ) : (
         <>
-          {p[tab].map(article)}
-          {!p[tab].length && (
+          {(Array.isArray(p[tab])?p[tab]:[]).map(article)}
+          {!(Array.isArray(p[tab])?p[tab]:[]).length && (
             <Empty text="让Agent读取原文与已有反馈，准备具体且有据的专业成果。" />
           )}
         </>
       );
   }
+  if (p && tab === "depth")
+    content = (
+      <DepthView
+        p={p}
+        invoke={(a, i) =>
+          invoke(a, {
+            object_id: record!.object.object_id,
+            revision: record!.object.revision,
+            ...i,
+          })
+        }
+        onError={(e) => setError(String(e))}
+      />
+    );
   return (
     <div className="app">
       <header>

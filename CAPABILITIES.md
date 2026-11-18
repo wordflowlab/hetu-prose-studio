@@ -19,5 +19,16 @@
 | compare_versions | 比较专业修订 | object_id, from_revision, to_revision | read |
 | export_project | 导出固定报告 | object_id, format | read |
 | get_operation | 回读原操作 | operation_key | read |
+| preview_rule_selection | 按本次目标选择偏好 | object_id, target | read |
+| compile_context | 编译有作用域的接续上下文 | object_id, target, goal, max_chars | read |
+| put_learning_sample | 保存固定修改样本 | object_id, expected_revision, expected_sha256, operation_key, sample | managed_write |
+| put_rule_derivation | 保存有据偏好提议 | object_id, expected_revision, expected_sha256, operation_key, derivation | managed_write |
+| put_conflict_resolution | 保存本次偏好冲突决定 | object_id, expected_revision, expected_sha256, operation_key, resolution | managed_write |
+| put_rule_applicability | 保存规则适用条件 | object_id, expected_revision, expected_sha256, operation_key, application | managed_write |
+| export_style_template | 导出所选风格模板 | object_id, rule_ids | read |
+| preview_template_import | 预览风格模板映射 | object_id, template, mappings | read |
+| preview_composition | 组合固定候选片段 | object_id, baseline_source_index, byte_start, byte_end, segments | read |
+| save_depth | 保存明确专业深化结构 | object_id, expected_revision, expected_sha256, operation_key, depth | managed_write |
+| inspect_basis | 读取同作品固定专业依据 | object_id, basis_index | read |
 
 默认流程、边界及验收见 [docs](docs/README.md)。

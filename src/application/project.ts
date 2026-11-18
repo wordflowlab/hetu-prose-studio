@@ -1,3 +1,5 @@
+import { inspectBasis } from "./basis.ts";
+import { depthWrites, newDepth, readDepth } from "../domain/depth.ts";
 import { createHash } from "node:crypto";
 import type { BackendContext, ObjectResult } from "../../vendor/hetu-sdk.ts";
 import {
@@ -118,6 +120,8 @@ export class Project {
   }
   async check(p: any, refs: any[]) {
     validate(p);
+    for (const ref of p.depth?.basis_refs ?? [])
+      await inspectBasis(this.store, ref);
     need(
       sourceIndices(p).every(
         (i) => Number.isInteger(i) && i >= 0 && i < refs.length,
@@ -145,6 +149,11 @@ export class Project {
       );
   }
   async save(input: any, p: any, old?: ObjectResult) {
+    need(
+      !(old?.object.content as any)?.depth || p.depth,
+      "不能丢弃已有深化结构；请读取当前完整对象。",
+      "hetu.stale_schema",
+    );
     const refs = input.source_refs ?? old?.object.source_refs ?? [];
     await this.check(p, refs);
     return this.store.save(input, p, old);
@@ -194,6 +203,17 @@ export class Project {
           : await this.store.get(i.object_id, i.revision),
         p: any = clone(r.object.content);
       if (effects.has(action)) {
+        if (action === "save_depth" || depthWrites[action]) {
+          if (action === "save_depth") p.depth = i.depth;
+          else {
+            p.depth ??= newDepth();
+            const [field, key] = depthWrites[action];
+            const at = p.depth[field].findIndex((v: any) => v.id === i[key].id);
+            if (at < 0) p.depth[field].push(i[key]);
+            else p.depth[field][at] = i[key];
+          }
+          return await this.save(i, p, r);
+        }
         {
           const [verb, item] = action.split("_");
           const fields: Record<string, string> = {
@@ -219,6 +239,15 @@ export class Project {
         return await this.save(i, p, r);
       }
       if (action === "get_project") return success(r);
+      if (action === "inspect_basis") {
+        const ref = p.depth?.basis_refs?.[i.basis_index];
+        need(ref, "专业依据索引不存在。");
+        return success({
+          project_ref: fixed(r),
+          basis_ref: ref,
+          record: await inspectBasis(this.store, ref),
+        });
+      }
       if (action === "export_project") {
         const report = {
           format: "hetu." + KIND,
@@ -258,6 +287,22 @@ export class Project {
         need(index < sources.length, "来源索引越界。");
         return sources[index];
       };
+      const depthResult = readDepth(p, action, i, sources);
+      if (depthResult !== undefined) {
+        if (action === "preview_composition")
+          return success({
+            project_ref: fixed(r),
+            ...depthResult,
+            ...preview(textOf(source(i.baseline_source_index)), [
+              {
+                byte_start: i.byte_start,
+                byte_end: i.byte_end,
+                replacement: depthResult.replacement,
+              },
+            ]),
+          });
+        return success({ project_ref: fixed(r), ...depthResult });
+      }
       if (action === "get_source")
         return success({ project_ref: fixed(r), ...source(i.source_index) });
       if (action === "preview_refinement")

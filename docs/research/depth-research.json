@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-18",
+  "references": [
+    {
+      "repository": "Adkid-Zephyr/Liltloom",
+      "commit": "514f853c8f072d892aee59b12f54b8ee56f5a6c5",
+      "path": "src/compiler.ts",
+      "sha256": "ff93d07632f515460afee9bfede1d979ce772306f3fbde8a50e41281324d1fe5",
+      "read_scope": "本轮定向源码／方法复核，未执行上游代码",
+      "code_copied": false
+    },
+    {
+      "repository": "shiyan688/dsh-novel-craft",
+      "commit": "8a52268b3d521e11fd78a3117c03c1f5a771a2cf",
+      "path": "README.md",
+      "sha256": "b5661e71186d8792776adf97ce2b4599362aaa5a995f01b9a1230dc4b7f50196",
+      "read_scope": "本轮定向源码／方法复核，未执行上游代码",
+      "code_copied": false
+    }
+  ],
+  "limitations": [
+    "独立实现，未主张与上游全功能相同",
+    "未以统计或模型来源评分判断文学质量"
+  ]
+}

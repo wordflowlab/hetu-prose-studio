@@ -162,7 +162,7 @@ export function DepthView({
           <p>
             已选 {result.selected_rule_ids.length} 条规则，{result.chars} 字符。
           </p>
-          <pre>{result.content}</pre>
+          {result.selected_rule_ids.map((id:string)=><p key={id}>{p.rules.find((r:any)=>r.id===id)?.text}</p>)}<details><summary>固定上下文详情</summary><pre>{result.content}</pre></details>
         </aside>
       )}
       <h3>修改学习</h3>
